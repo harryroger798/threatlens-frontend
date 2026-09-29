@@ -1,0 +1,8 @@
+name = "threatlens-ui"
+compatibility_date = "2026-09-01"
+pages_build_output_dir = "."
+
+[vars]
+# Where the Pages Function proxies /api/v1 to (FastAPI on Render).
+# Local dev overrides this via .dev.vars (gitignored).
+API_ORIGIN = "https://threatlens-backend-tqbc.onrender.com"
