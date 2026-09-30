@@ -37,7 +37,9 @@ export function initWidgetPanel(open) {
   const panel = qs('#widget-panel');
   if (!panel) return;
   if (open) { panel.showModal(); return; }
-  // render checkboxes into the panel
+  // Boot path: pre-render the checkbox list so the panel is ready when the
+  // user clicks "Widgets" - never open the dialog here (it used to pop up on
+  // every page load).
   const layout = getLayout();
   panel.innerHTML = `<div class="widget-panel-head"><p class="eyebrow">DASHBOARD LAYOUT</p><h2>Configure widgets</h2></div>`
     + WIDGET_IDS.map(w => {
@@ -45,7 +47,6 @@ export function initWidgetPanel(open) {
       return `<label class="widget-toggle"><input type="checkbox" data-widget-id="${w.id}" ${checked ? 'checked' : ''}><span>${escapeHtml(w.label)}</span></label>`;
     }).join('')
     + `<div class="widget-panel-foot"><button class="button ghost" type="button" data-action="close-widget-panel">Close</button><button class="button primary" type="button" data-action="save-widgets">Save layout</button></div>`;
-  panel.showModal();
   panel.querySelector('[data-action="close-widget-panel"]').addEventListener('click', () => panel.close());
   panel.querySelector('[data-action="save-widgets"]').addEventListener('click', () => {
     const newLayout = {};

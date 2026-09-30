@@ -512,8 +512,6 @@ async function init() {
   renderAll();
   loadAndRenderHeatmap('heatmap-container');
   applyWidgetLayout();
-  loadAndRenderHeatmap('heatmap-container');
-  applyWidgetLayout();
   qsa('.table-scroll').forEach(sc => sc.addEventListener('scroll', () => {
     sc.classList.toggle('is-scrolled', sc.scrollTop > 2);
   }, { passive: true }));

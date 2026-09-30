@@ -238,3 +238,41 @@ Production verification:
 - Cloudflare.com domain: VirusTotal returned vt_malicious=0 (clean domain) — REAL DATA
 - Refresh token: cookie set on login, silent auto-renew at 25 min — VERIFIED
 - E2E test artifacts: cleaned from production DB (0 remaining) — VERIFIED
+
+## R10 - Widget dialog fix + true mobile collapse + SEO hygiene (2026-09-30)
+
+Defects found in a full all-screen audit (SC-UWO 7-engine run + live viewport sweep at
+390/768/1280px across all 8 screens):
+
+1. **Widget layout dialog opened on every page load.** `initWidgetPanel()` boot call
+   rendered the panel AND called `showModal()`. Fix: boot path now pre-renders only;
+   the dialog opens exclusively via the "Widgets" button.
+2. **Widget dialog offscreen on mobile** (no width constraint, UA default dialog).
+   Fix: `#widget-panel{width:min(26rem,92vw);max-height:min(34rem,88dvh)}`.
+3. **Forced desktop min-widths at <=860px** (`view-header 42rem`, `incident/hunt 54rem`,
+   `stat-strip 43rem`, `triage 48rem`) pushed headers and rails offscreen. Fix: all
+   workspace layouts now collapse to true single-column fluid stacks at <=860px;
+   horizontal scrolling reserved for data tables inside `.table-scroll` and
+   `#health-content` only.
+4. **Hunt query input crushed to 4px** on mobile. Fix: hunt query bar wraps.
+5. **Header actions overflow** (Generate report offscreen). Fix: view-header wraps.
+6. **Duplicate boot calls** (`loadAndRenderHeatmap`/`applyWidgetLayout` x2) removed.
+7. **9 h1 elements** (one per view). Fix: single sr-only document h1, view titles
+   demoted to h2 with `.view-title` size bump.
+8. **Classic-seo hygiene:** canonical, robots meta, hreflang x-default, full OG/Twitter
+   card set + generated 1200x630 og image, JSON-LD (WebApplication + Breadcrumb),
+   richer title/description, viewport-fit=cover, robots.txt, sitemap.xml, app footer
+   with crawlable project links.
+9. **Accessibility:** added `.sr-only` utility; keyboard/ARIA unchanged.
+
+Verification: live viewport sweep after deploy at 390/768/1280 across login, overview,
+triage (+drawer), incidents, hunt (+graph/ATT&CK), feeds, users, audit, health.
+
+### R11 - Notification badge geometry (2026-09-30)
+- User-reported: the count in the bell badge sat outside/clipped below the red circle.
+- Root cause: `.notification-count` was an abspos child of the `.icon-button` grid;
+  inherited `place-items:center` re-positions abspos grid children (downward drift),
+  and inherited body `line-height` pushed the glyph past the 1rem-tall badge.
+- Fix: explicit corner pin (top/right -.375rem, z-index), inline-flex centring,
+  `line-height:1`, 1.25rem badge, `pointer-events:none`. Toolbar wrap added at <=860px
+  so the triage STATE select can no longer spill past the right edge.

@@ -2,9 +2,28 @@
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="ThreatLens cyber threat intelligence operations console">
-  <title>ThreatLens</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="ThreatLens is a production cyber threat intelligence console: multi-feed IOC ingestion, AbuseIPDB and VirusTotal enrichment, correlation, scoring and four role-based SOC dashboards.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>ThreatLens — Cyber Threat Intelligence Dashboard</title>
+  <link rel="canonical" href="https://threatlens-5f1.pages.dev/threatlens">
+  <link rel="alternate" hreflang="x-default" href="https://threatlens-5f1.pages.dev/threatlens">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ThreatLens">
+  <meta property="og:title" content="ThreatLens — Cyber Threat Intelligence Dashboard">
+  <meta property="og:description" content="Multi-feed IOC ingestion, real enrichment, correlation and scoring across four role-based SOC dashboards.">
+  <meta property="og:url" content="https://threatlens-5f1.pages.dev/threatlens">
+  <meta property="og:image" content="https://threatlens-5f1.pages.dev/threatlens-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ThreatLens — Cyber Threat Intelligence Dashboard">
+  <meta name="twitter:description" content="Multi-feed IOC ingestion, real enrichment, correlation and scoring across four role-based SOC dashboards.">
+  <meta name="twitter:image" content="https://threatlens-5f1.pages.dev/threatlens-og.png">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"ThreatLens","applicationCategory":"SecurityApplication","operatingSystem":"Web","url":"https://threatlens-5f1.pages.dev/threatlens","description":"ThreatLens is a production cyber threat intelligence console: multi-feed IOC ingestion, AbuseIPDB and VirusTotal enrichment, correlation, scoring and four role-based SOC dashboards.","inLanguage":"en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ThreatLens","item":"https://threatlens-5f1.pages.dev/threatlens"}]}}
+  </script>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Cpath d='M4.5 7.5 14 2l9.5 5.5v10L14 23l-9.5-5.5z' fill='none' stroke='%233EC7B3' stroke-width='1.6'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +35,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to work area</a>
+  <h1 class="sr-only">ThreatLens — Cyber Threat Intelligence Dashboard</h1>
   <div class="app-shell">
     <header class="topbar">
       <a class="brand" href="#overview" aria-label="ThreatLens overview">
@@ -66,7 +86,7 @@
     <main id="main" class="main" tabindex="-1">
       <section class="view" data-view="overview" aria-labelledby="overview-title">
         <header class="view-header">
-          <div><p class="eyebrow">RISK POSTURE</p><h1 id="overview-title">Executive overview</h1><p class="subhead">30-day exposure, active intelligence, and SOC throughput.</p></div>
+          <div><p class="eyebrow">RISK POSTURE</p><h2 id= class="view-title""overview-title">Executive overview</h2><p class="subhead">30-day exposure, active intelligence, and SOC throughput.</p></div>
           <div class="header-actions"><span class="freshness"><span class="live-dot"></span>updated <time class="mono" datetime="2026-09-28T14:02:11Z">14:02:11Z</time> · live</span><button class="button ghost" type="button" id="widget-config-btn" aria-label="Configure dashboard widgets"><i data-lucide="layout-dashboard"></i>Widgets</button><button class="button secondary" type="button" data-action="generate-report"><i data-lucide="file-output"></i>Generate report</button></div>
         </header>
         <div class="stat-strip" aria-label="Risk summary">
@@ -109,7 +129,7 @@
 
       <section class="view" data-view="triage" aria-labelledby="triage-title">
         <header class="view-header compact-header">
-          <div><p class="eyebrow">SOC ANALYST</p><h1 id="triage-title">Triage queue</h1></div>
+          <div><p class="eyebrow">SOC ANALYST</p><h2 id= class="view-title""triage-title">Triage queue</h2></div>
           <div class="header-actions"><span class="freshness"><span class="live-dot"></span>updated <time class="mono">14:02:11Z</time> · live</span><button class="button primary" type="button" data-action="start-work"><i data-lucide="play"></i>Start work</button></div>
         </header>
         <div class="queue-counters"><div class="counter active" id="qc-new" role="status"><span>NEW</span><strong class="tabular">36</strong></div><div class="counter" id="qc-unassigned" role="status"><span>UNASSIGNED</span><strong class="tabular">41</strong></div><div class="counter" id="qc-mine" role="status"><span>MY QUEUE</span><strong class="tabular">12</strong></div><div class="queue-hint"><kbd>j</kbd><kbd>k</kbd> move <kbd>Enter</kbd> open</div></div>
@@ -134,7 +154,7 @@
       </section>
 
       <section class="view" data-view="incidents" aria-labelledby="incidents-title">
-        <header class="view-header compact-header"><div><p class="eyebrow">INCIDENT RESPONSE</p><h1 id="incidents-title">Incident workspace</h1></div><div class="header-actions"><span class="severity critical">SEV-1</span><button class="button secondary" type="button" data-action="generate-report"><i data-lucide="file-output"></i>Generate report</button></div></header>
+        <header class="view-header compact-header"><div><p class="eyebrow">INCIDENT RESPONSE</p><h2 id= class="view-title""incidents-title">Incident workspace</h2></div><div class="header-actions"><span class="severity critical">SEV-1</span><button class="button secondary" type="button" data-action="generate-report"><i data-lucide="file-output"></i>Generate report</button></div></header>
         <div class="incident-layout">
           <aside class="incident-list panel-flat" aria-label="Open incidents">
             <div class="section-head"><div><p class="eyebrow" id="incident-open-count">OPEN · 12</p><h2>Incidents</h2></div><label class="state-control">STATE<select data-state-target="incidents" aria-label="Incident list state"><option value="populated">populated</option><option value="loading">loading</option><option value="empty">empty</option><option value="error">error</option><option value="stale">stale</option></select></label></div>
@@ -154,7 +174,7 @@
       </section>
 
       <section class="view" data-view="hunt" aria-labelledby="hunt-title">
-        <header class="view-header compact-header"><div><p class="eyebrow">THREAT HUNTING</p><h1 id="hunt-title">Hunt workspace</h1></div><div class="header-actions"><button class="button secondary" type="button" id="saved-hunts-jump"><i data-lucide="bookmark"></i>Saved hunts</button><button class="button primary" type="button" data-action="save-hunt"><i data-lucide="save"></i>Save hunt</button></div></header>
+        <header class="view-header compact-header"><div><p class="eyebrow">THREAT HUNTING</p><h2 id= class="view-title""hunt-title">Hunt workspace</h2></div><div class="header-actions"><button class="button secondary" type="button" id="saved-hunts-jump"><i data-lucide="bookmark"></i>Saved hunts</button><button class="button primary" type="button" data-action="save-hunt"><i data-lucide="save"></i>Save hunt</button></div></header>
         <div class="hunt-query"><label for="hunt-query">QUERY</label><div><i data-lucide="terminal"></i><input id="hunt-query" class="mono" value='type:(domain OR ip) AND score:>=70 AND last_seen:[now-7d TO now]' spellcheck="false"><button class="button primary" type="button" id="hunt-run">Run hunt</button></div></div>
         <div class="hunt-layout">
           <aside class="facet-rail panel-flat"><div class="section-head"><div><p class="eyebrow">FACETS</p><h2>Refine</h2></div><button class="text-button" type="button" id="facet-clear">Clear</button></div><div id="facet-content"></div></aside>
@@ -168,29 +188,29 @@
       </section>
 
       <section class="view" data-view="admin-feeds" aria-labelledby="feeds-title">
-        <header class="view-header compact-header"><div><p class="eyebrow">ADMIN · INGESTION</p><h1 id="feeds-title">Feeds</h1></div><div class="header-actions"><span class="freshness"><span class="live-dot"></span>updated <time class="mono">14:02:11Z</time> · live</span><button class="button primary" type="button" id="add-feed"><i data-lucide="plus"></i>Add feed</button></div></header>
+        <header class="view-header compact-header"><div><p class="eyebrow">ADMIN · INGESTION</p><h2 id= class="view-title""feeds-title">Feeds</h2></div><div class="header-actions"><span class="freshness"><span class="live-dot"></span>updated <time class="mono">14:02:11Z</time> · live</span><button class="button primary" type="button" id="add-feed"><i data-lucide="plus"></i>Add feed</button></div></header>
         <div class="admin-layout"><section class="admin-main"><div class="toolbar"><label class="filter-search"><i data-lucide="search"></i><input type="search" placeholder="Filter feeds" aria-label="Filter feeds"></label><label class="state-control">STATE<select data-state-target="feeds" aria-label="Feed list state"><option value="populated">populated</option><option value="loading">loading</option><option value="empty">empty</option><option value="error">error</option><option value="stale">stale</option></select></label></div><div class="state-banner stale-banner" data-banner="feeds" hidden><i data-lucide="clock-3"></i>Stale data · last poll <span class="mono">2026-09-28 13:58:00Z</span><button class="text-button" type="button" data-action="retry">Retry</button></div><div class="table-scroll" id="feed-table-container"></div></section><aside class="admin-rail panel"><div class="section-head"><div><p class="eyebrow">INGEST · 24H</p><h2>Poller summary</h2></div></div><dl class="metric-list"><div><dt>Indicators received</dt><dd class="mono">1,284,942</dd></div><div><dt>Canonical merges</dt><dd class="mono">384,108</dd></div><div><dt>Rejected records</dt><dd class="mono high-text">1,204</dd></div><div><dt>Median poll lag</dt><dd class="mono">38s</dd></div></dl></aside></div>
       </section>
 
       <section class="view" data-view="admin-users" aria-labelledby="users-title">
-        <header class="view-header compact-header"><div><p class="eyebrow">ADMIN · ACCESS</p><h1 id="users-title">Users and roles</h1></div><button class="button primary" type="button" id="add-user"><i data-lucide="user-plus"></i>Add user</button></header>
+        <header class="view-header compact-header"><div><p class="eyebrow">ADMIN · ACCESS</p><h2 id= class="view-title""users-title">Users and roles</h2></div><button class="button primary" type="button" id="add-user"><i data-lucide="user-plus"></i>Add user</button></header>
         <div class="admin-layout"><section class="admin-main"><div class="toolbar"><label class="filter-search"><i data-lucide="search"></i><input type="search" placeholder="Filter users" aria-label="Filter users"></label><label class="state-control">STATE<select data-state-target="users" aria-label="User list state"><option value="populated">populated</option><option value="loading">loading</option><option value="empty">empty</option><option value="error">error</option><option value="stale">stale</option></select></label></div><div class="table-scroll" id="user-table-container"></div></section><aside class="admin-rail panel"><div class="section-head"><div><p class="eyebrow">POLICY</p><h2>Access posture</h2></div></div><dl class="metric-list"><div><dt>Active users</dt><dd class="mono">43</dd></div><div><dt>MFA coverage</dt><dd class="mono low-text">95.3%</dd></div><div><dt>Privileged accounts</dt><dd class="mono">6</dd></div><div><dt>Review due</dt><dd class="mono medium-text">4</dd></div></dl></aside></div>
       </section>
 
       <section class="view" data-view="admin-audit" aria-labelledby="audit-title">
-        <header class="view-header compact-header"><div><p class="eyebrow">ADMIN · GOVERNANCE</p><h1 id="audit-title">Audit log</h1></div><button class="button secondary" type="button" id="export-audit"><i data-lucide="download"></i>Export CSV</button></header>
+        <header class="view-header compact-header"><div><p class="eyebrow">ADMIN · GOVERNANCE</p><h2 id= class="view-title""audit-title">Audit log</h2></div><button class="button secondary" type="button" id="export-audit"><i data-lucide="download"></i>Export CSV</button></header>
         <section class="full-admin"><div class="toolbar"><label class="filter-search wide"><i data-lucide="search"></i><input id="audit-action" type="search" placeholder="Exact action — e.g. alert.acknowledge" aria-label="Filter by action">
 <input id="audit-actor" type="search" placeholder="Filter by actor email" aria-label="Filter by actor"></label><button class="filter-chip" type="button" data-audit-chip="alert.updated" aria-pressed="false">Alert changes</button><button class="filter-chip" type="button" data-audit-chip="auth.login" aria-pressed="false">Sign-ins</button><label class="state-control">STATE<select data-state-target="audit" aria-label="Audit list state"><option value="populated">populated</option><option value="loading">loading</option><option value="empty">empty</option><option value="error">error</option><option value="stale">stale</option></select></label></div><div class="table-scroll" id="audit-table-container"></div></section>
       </section>
 
       <section class="view" data-view="admin-health" aria-labelledby="health-title">
-        <header class="view-header compact-header"><div><p class="eyebrow">ADMIN · PLATFORM</p><h1 id="health-title">System health</h1></div><span class="freshness"><span class="live-dot"></span>updated <time class="mono">14:02:11Z</time> · live</span></header>
+        <header class="view-header compact-header"><div><p class="eyebrow">ADMIN · PLATFORM</p><h2 id= class="view-title""health-title">System health</h2></div><span class="freshness"><span class="live-dot"></span>updated <time class="mono">14:02:11Z</time> · live</span></header>
         <div class="health-layout"><section class="health-main"><div class="service-strip"><div><span>API STATUS</span><strong class="mono" id="hs-1">—</strong><small>GET /health</small></div><div><span>DATABASE</span><strong class="mono" id="hs-2">—</strong><small>canonical store</small></div><div><span>FEEDS OK</span><strong class="mono" id="hs-3">—</strong><small>enabled · polling</small></div><div><span>WS CHANNELS</span><strong class="mono" id="hs-4">—</strong><small>bus subscribers</small></div></div><div class="toolbar"><h2>Services</h2><label class="state-control">STATE<select data-state-target="health" aria-label="Health list state"><option value="populated">populated</option><option value="loading">loading</option><option value="empty">empty</option><option value="error">error</option><option value="stale">stale</option></select></label></div><div id="health-content"></div></section><aside class="health-rail panel"><div class="section-head"><div><p class="eyebrow">EVENTS · 24H</p><h2>Health changes</h2></div></div><ol class="health-events"><li><span class="status-dot medium-dot"></span><div><strong>URLhaus poll delayed</strong><small class="mono">2026-09-28 13:42:19Z</small></div></li><li><span class="status-dot low-dot"></span><div><strong>search-02 rejoined</strong><small class="mono">2026-09-28 10:18:44Z</small></div></li><li><span class="status-dot info-dot"></span><div><strong>worker pool scaled to 8</strong><small class="mono">2026-09-28 08:00:03Z</small></div></li></ol></aside></div>
       </section>
       <section class="view" data-view="login" aria-labelledby="login-title">
         <div class="login-wrap">
           <div class="login-panel">
-            <div class="login-head"><span class="avatar">TL</span><div><p class="eyebrow">SENTINOVA CTI</p><h1 id="login-title">Sign in</h1></div></div>
+            <div class="login-head"><span class="avatar">TL</span><div><p class="eyebrow">SENTINOVA CTI</p><h2 id= class="view-title""login-title">Sign in</h2></div></div>
             <form id="login-form" novalidate>
               <label class="login-field"><span>ENDPOINT</span><input id="login-endpoint" class="mono" type="url" placeholder="same-origin · override for tunneled backends" spellcheck="false" autocomplete="off"></label>
               <label class="login-field"><span>EMAIL</span><input id="login-email" type="email" required autocomplete="username" placeholder="operator@sentinova.io"></label>
@@ -213,6 +233,15 @@
           </div>
         </div>
       </section>
+      <footer class="app-footer">
+        <p><strong>ThreatLens</strong> — Sentinova Security Systems CTI console</p>
+        <nav aria-label="Project links">
+          <a href="https://github.com/harryroger798/threatlens-backend" target="_blank" rel="noopener">Backend repository</a>
+          <a href="https://github.com/harryroger798/threatlens-frontend" target="_blank" rel="noopener">Frontend repository</a>
+          <a href="https://threatlens-backend-tqbc.onrender.com/docs" target="_blank" rel="noopener">API documentation</a>
+          <a href="https://threatlens-5f1.pages.dev/threatlens" rel="noopener">Console</a>
+        </nav>
+      </footer>
     </main>
 
     <aside class="notification-tray" id="notification-tray" aria-hidden="true" aria-label="Notifications">
