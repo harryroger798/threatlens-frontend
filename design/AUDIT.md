@@ -276,3 +276,18 @@ triage (+drawer), incidents, hunt (+graph/ATT&CK), feeds, users, audit, health.
 - Fix: explicit corner pin (top/right -.375rem, z-index), inline-flex centring,
   `line-height:1`, 1.25rem badge, `pointer-events:none`. Toolbar wrap added at <=860px
   so the triage STATE select can no longer spill past the right edge.
+
+### R10/R11 SEO audit trail (SC-UWO run_munhmn24_2cfpm4)
+Baseline 259 failed -> 43 failed (1555 passed, 0 critical/high) after R10/R11.
+Fixed: canonical, robots meta (+noarchive), hreflang x-default, OG/Twitter cards,
+og image, WebApplication + BreadcrumbList JSON-LD, viewport-fit, robots.txt,
+sitemap.xml, single h1, description length (<=160), visible breadcrumb,
+root-relative console link, app footer.
+
+Remaining 43 are documented won't-fix:
+- h4/h5/h6 "not empty" (21): the console intentionally uses no h4-h6; the rule
+  fails on absence, and adding empty/fake headings would harm semantics.
+- meta-robots noindex/nofollow/nosnippet "present" (~20): a public demo console
+  must stay indexable and snippet-eligible; adding these directives would hide it.
+- localbusiness_present (1): SaaS console, not a physical local business; a fake
+  address/telephone would be incorrect structured data.
